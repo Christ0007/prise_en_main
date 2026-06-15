@@ -58,6 +58,18 @@ import { ref, reactive } from 'vue';
   function handleSubmit() {
     savedName.value = name.value
   }
+
+  const email = ref('')
+  const error = ref('')
+
+  function submit() {
+    if (!email.value.includes('@')) {
+      error.value = "Email invalide"
+    } else {
+      error.value = ""
+      console.log("OK :", email.value)
+    }
+  }
 </script>
 
 <template>
@@ -113,6 +125,20 @@ import { ref, reactive } from 'vue';
   </form>
   
   <p>Nom envoyé : {{ savedName }}</p>
+  <input v-model="email" placeholder="Email" />
+
+  <p v-if="error" style="color:red">
+    {{ error }}
+  </p>
+
+   <button @click="submit">
+    Envoyer
+  </button>
+
+  <p v-if="error">{{ error }}</p>
+  <p v-if="email.length > 0 && !email.includes('@')">
+    Format incorrect
+  </p>
   <router-view />
   </template>
 

@@ -31,6 +31,8 @@ const calculer = () => {
 
     <button @click="ajouter('9')">9</button>
 
+    <button @click="ajouter('*')">*</button>
+
     <br>
 
     <button @click="ajouter('4')">4</button>
@@ -38,6 +40,9 @@ const calculer = () => {
     <button @click="ajouter('5')">5</button>
 
     <button @click="ajouter('6')">6</button>
+
+    <button @click="ajouter('-')">-</button>
+
 
     <br>
 
@@ -47,19 +52,14 @@ const calculer = () => {
 
     <button @click="ajouter('3')">3</button>
 
+    <button @click="ajouter('+')">+</button>
+
+
     <br>
 
     <button @click="ajouter('0')">0</button>
-    <br>
-
-    <button @click="ajouter('+')">+</button>
-
-    <button @click="ajouter('-')">-</button>
-
-    <button @click="ajouter('*')">*</button>
 
     <button @click="ajouter('/')">/</button>
-    <br>
 
     <button @click="effacer"> C </button>
 
