@@ -1,8 +1,10 @@
 <template>
   <aside>
     <ul>
+        <li><router-link to="/dashboard">Dashboard</router-link></li>
         <li><router-link to="/">Accueil</router-link></li>
         <li><router-link to="/About">A propos</router-link></li>
+        <li><router-link to="/calculator">Calculatrice</router-link></li>
     </ul>
   </aside>
 </template>
@@ -23,6 +25,6 @@
     }
 
     ul li a:hover{
-        color: red;
+        color: white;
     }
 </style>
